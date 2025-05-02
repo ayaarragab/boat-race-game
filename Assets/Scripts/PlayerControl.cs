@@ -6,7 +6,7 @@ public class PlayerControl : MonoBehaviour
     private float speed = 100f;
     private float inputV;
     private float inputH;
-    private float boatY = -56.2f;
+    private float boatY = -50.2f;
     private Rigidbody rb;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
