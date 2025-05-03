@@ -40,3 +40,12 @@ BoatRaceGame/
 ├── Packages/
 ├── README.md
 └── BoatRaceGame.sln
+
+## 🤝 Contributors
+
+We thank the following contributors for their efforts in making this project possible:
+
+- **[Aya Ragab]**
+- **[Amira Ahmed]**
+- **[Shahd Aboud]**
+- **[Merna Ayman]**
