@@ -4,23 +4,22 @@ public class Camera2Position : MonoBehaviour
 {
     public GameObject player;
 
-    // Configurable camera settings
-    private Vector3 positionOffset = new Vector3(-54, 39, 13.56f);
-    private bool smoothFollow = true;
-    private float followSpeed = 5f;
+    [Header("Camera Follow Settings")]
+    private Vector3 localOffset = new Vector3(5.83f, 2, -0.3f); // height and distance behind boat
+    public float followSpeed = 5f;
 
-    // Camera behavior options
-    private bool matchPlayerRotation = false;
-    private bool lookAtPlayer = true;
-    private float rotationDamping = 2f;
+    [Header("Look Ahead Settings")]
+    private float lookAheadDistance = -1.05f; // how far the camera looks ahead of the boat
+    public float rotationDamping = 2f;
 
-    // Optional screen shake effect
-    private float shakeAmount = 0f;
-    private float shakeDuration = 0f;
-    private Vector3 originalPosition;
-    private void Start()
+    [Header("Optional Screen Shake")]
+    public float shakeAmount = 0f;
+    public float shakeDuration = 0f;
+
+    private Vector3 velocity = Vector3.zero;
+
+    void Start()
     {
-
         if (player == null)
         {
             Debug.LogError("Player reference not set in CameraPosition script!");
@@ -29,47 +28,30 @@ public class Camera2Position : MonoBehaviour
             if (player == null)
                 Debug.LogError("No player found with 'Player' tag!");
         }
-
-        originalPosition = transform.position;
     }
 
-    private void LateUpdate()
+    void LateUpdate()
     {
         if (player == null)
             return;
 
-        Vector3 targetPosition = player.transform.position + positionOffset;
+        // Desired position is behind the player in local space (relative to boat’s rotation)
+        Vector3 desiredPosition = player.transform.TransformPoint(localOffset);
+        transform.position = Vector3.Lerp(transform.position, desiredPosition, followSpeed * Time.deltaTime);
 
-        // Apply smooth follow if enabled
-        if (smoothFollow)
-        {
-            transform.position = Vector3.Lerp(transform.position, targetPosition, followSpeed * Time.deltaTime);
-        }
-        else
-        {
-            transform.position = targetPosition;
-        }
+        // Look ahead based on the boat's forward direction
+        Vector3 lookTarget = player.transform.position + player.transform.forward * lookAheadDistance;
+        Quaternion desiredRotation = Quaternion.LookRotation(lookTarget - transform.position);
+        transform.rotation = Quaternion.Slerp(transform.rotation, desiredRotation, rotationDamping * Time.deltaTime);
 
-        // Handle rotation options
-        if (matchPlayerRotation)
+        // Optional shake
+        if (shakeDuration > 0f)
         {
-            transform.rotation = player.transform.rotation;
-        }
-        else if (lookAtPlayer)
-        {
-            Quaternion targetRotation = Quaternion.LookRotation(player.transform.position - transform.position);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationDamping * Time.deltaTime);
-        }
-
-        // Apply screen shake if active
-        if (shakeDuration > 0)
-        {
-            transform.position = transform.position + Random.insideUnitSphere * shakeAmount;
+            transform.position += Random.insideUnitSphere * shakeAmount;
             shakeDuration -= Time.deltaTime;
         }
     }
 
-    // Call this method to trigger a screen shake
     public void ShakeCamera(float amount, float duration)
     {
         shakeAmount = amount;
