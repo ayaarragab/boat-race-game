@@ -10,6 +10,7 @@ TagManager:
   - Boat
   - Player1
   - Player2
+  - FinishSign
   layers:
   - Default
   - TransparentFX
