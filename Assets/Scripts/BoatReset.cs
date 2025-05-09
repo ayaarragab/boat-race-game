@@ -23,7 +23,14 @@ public class BoatReset : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        // Reset position and rotation when colliding with anything
+        // Skip reset if this object is Player1 or Player2 and collides with the other
+        if ((gameObject.CompareTag("Player1") && collision.gameObject.CompareTag("Player2")) ||
+            (gameObject.CompareTag("Player2") && collision.gameObject.CompareTag("Player1")))
+        {
+            return; // Exit without resetting
+        }
+
+        // Reset position and rotation for all other collisions
         transform.position = initialPosition;
         transform.rotation = initialRotation;
 
