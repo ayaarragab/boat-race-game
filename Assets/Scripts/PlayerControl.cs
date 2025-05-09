@@ -12,6 +12,7 @@ public class PlayerControl : MonoBehaviour
     private float currentSpeed = 0f;
     private Rigidbody rb;
 
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -30,6 +31,8 @@ public class PlayerControl : MonoBehaviour
             inputV = -(Input.GetAxis("Vertical"));
             inputH = Input.GetAxis("Horizontal");
         }
+        
+
     }
 
     void FixedUpdate()

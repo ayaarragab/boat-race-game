@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🚤 Boat Race Game
 
 A 3D boat racing game built in **Unity**, where players control boats and race across dynamic water environments filled with obstacles and power-ups. Experience smooth controls, realistic water physics, and intense racing gameplay.
@@ -49,3 +50,6 @@ We thank the following contributors for their efforts in making this project pos
 - **[Amira Ahmed]**
 - **[Shahd Aboud]**
 - **[Merna Ayman]**
+=======
+# BoatRace
+>>>>>>> 6311b52c210cc09257018b0ad45ba6539107740a
