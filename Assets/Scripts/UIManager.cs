@@ -20,7 +20,7 @@ public class UIManager : MonoBehaviour
     public int player2Coins = 0;
     private const int maxCoinsPerPlayer = 50;
 
-    public AudioSource winMusic;
+    [SerializeField] private AudioClip winSound;  // ??? ?????
 
     private void Awake()
     {
@@ -83,9 +83,9 @@ public class UIManager : MonoBehaviour
         levelCompletePanel.SetActive(true);
         winText.text = $"{playerTag} Collected All Coins!";
 
-        if (winMusic != null && !winMusic.isPlaying)
+        if (winSound != null)
         {
-            winMusic.Play();
+            AudioManager.Instance.PlayClip(winSound);
         }
     }
 
@@ -105,7 +105,7 @@ public class UIManager : MonoBehaviour
 
     public void MainMenu()
     {
-        Destroy(gameObject); // ????? ??? UIManager ??? ?????? ???????
+        Destroy(gameObject);
         SceneManager.LoadScene("MainMenu");
     }
 }

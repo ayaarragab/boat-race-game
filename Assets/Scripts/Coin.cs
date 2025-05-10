@@ -24,12 +24,13 @@ public class Coin : MonoBehaviour
 
         if (collectEffect != null)
         {
-            Instantiate(collectEffect, transform.position, Quaternion.identity);
+            ParticleSystem effect = Instantiate(collectEffect, transform.position, Quaternion.identity);
+            Destroy(effect.gameObject, effect.main.duration);
         }
 
         if (collectSound != null)
         {
-            AudioSource.PlayClipAtPoint(collectSound, transform.position);
+            AudioManager.Instance.PlayClip(collectSound);
         }
 
         Destroy(gameObject);
