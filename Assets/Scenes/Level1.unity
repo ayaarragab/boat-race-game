@@ -766,7 +766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 1907528873}
-  LOOSEAudio: {fileID: 1332009684}
+  LOOSEAudio: {fileID: 0}
 --- !u!4 &298173133 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3370401635388296908, guid: b767c2c44a396e843a8ac17a2a831911, type: 3}
@@ -989,7 +989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 1907528873}
-  LOOSEAudio: {fileID: 1332009684}
+  LOOSEAudio: {fileID: 0}
 --- !u!114 &371716135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1002,135 +1002,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56ff3924db0e66d468232bd6287c7ad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &381594462
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 381594464}
-  - component: {fileID: 381594463}
-  m_Layer: 0
-  m_Name: backGroundMusic
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!82 &381594463
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 381594462}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b02a78f4612b56d4a8ea10c0307a1aba, type: 3}
-  m_Resource: {fileID: 8300000, guid: b02a78f4612b56d4a8ea10c0307a1aba, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.08
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!4 &381594464
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 381594462}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 635.92944, y: 222.45856, z: -433.5421}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1500,7 +1371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 1907528873}
-  LOOSEAudio: {fileID: 1332009684}
+  LOOSEAudio: {fileID: 0}
 --- !u!65 &523948465
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1535,7 +1406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 1907528873}
-  LOOSEAudio: {fileID: 1332009684}
+  LOOSEAudio: {fileID: 0}
 --- !u!1 &532366348
 GameObject:
   m_ObjectHideFlags: 0
@@ -1849,7 +1720,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d15fc34962f7a754395cbf5d3e84180a, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: d15fc34962f7a754395cbf5d3e84180a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -2845,7 +2716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 1907528873}
-  LOOSEAudio: {fileID: 1332009684}
+  LOOSEAudio: {fileID: 0}
 --- !u!1001 &973680300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4523,7 +4394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 1907528873}
-  LOOSEAudio: {fileID: 1332009684}
+  LOOSEAudio: {fileID: 0}
 --- !u!64 &1442907442
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4871,7 +4742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 1907528873}
-  LOOSEAudio: {fileID: 1332009684}
+  LOOSEAudio: {fileID: 0}
 --- !u!1001 &1650821165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5329,7 +5200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 1907528873}
-  LOOSEAudio: {fileID: 1332009684}
+  LOOSEAudio: {fileID: 0}
 --- !u!4 &1867884540 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7768589822984281900, guid: 6a301d09debaf1e4a8d3e2657cc44a96, type: 3}
@@ -5738,7 +5609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 1907528873}
-  LOOSEAudio: {fileID: 1332009684}
+  LOOSEAudio: {fileID: 0}
 --- !u!1 &1955846681
 GameObject:
   m_ObjectHideFlags: 0
@@ -8439,7 +8310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 1907528873}
-  LOOSEAudio: {fileID: 1332009684}
+  LOOSEAudio: {fileID: 0}
 --- !u!4 &5308323072544696730
 Transform:
   m_ObjectHideFlags: 0
@@ -9161,7 +9032,6 @@ SceneRoots:
   - {fileID: 2089991800}
   - {fileID: 1432801607}
   - {fileID: 1332009685}
-  - {fileID: 381594464}
   - {fileID: 1213344866}
   - {fileID: 1955846682}
   - {fileID: 293323453}
